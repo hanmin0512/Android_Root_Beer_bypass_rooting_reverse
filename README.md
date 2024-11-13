@@ -30,3 +30,28 @@ Application: RootBeer Sample
 
 ### 수행
 
+#### 앱 그냥 실행
+
+![image](https://github.com/user-attachments/assets/555f602e-664d-4f82-bf74-1d1ebd5174b9)
+
+![image](https://github.com/user-attachments/assets/b850727c-c36c-4c27-b559-40b96bb7741e)
+
+#### 후킹 해야 할 함수 목록
+
+- Root Management Apps: detectRootManagementApps
+- Potentially Dangerous Apps: detectPotentiallyDangerousApps
+- Root Cloaking Apps: detectRootCloakingApps
+- TestKeys: detectTestKeys
+- For RW Paths: checkForRWPaths
+- Dangerous Props: checkForDangerousProps
+- Root via native check: checkForRootNative
+- SE linux Flag is Enabled: isSelinuxFlagInEnabled
+- Magisk specific checks: checkForMagiskBinary
+
+#### SE linux Flag is Enabled 함수 후킹 과정
+
+다른 함수들은 com.scottyab.rootbeer.RootBeer 소스코드에 존재하여 쉽게 찾아 후킹을 진행 할 수 있었다.
+
+하지만 SE linux Flag is Enabled 항목인 isSelinuxFlagInEnabled 다른 위치에 있어 탐지에 걸리게 하기 어려웠다.
+
+
